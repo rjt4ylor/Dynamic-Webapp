@@ -29,14 +29,24 @@ body{
 	margin-top:0px;
 	margin-left:-40px;
 }
+#flag{
+float:left;
+width:100px;
+margin-top: 50px;
+margin-left: -50px;
 
+}
 #indent{
 	text-indent: 3.0em;
 }
 #background{
 	background-color:rgb(204,204,204);
-	height:650px;
+	height:100%;
+	width:100%;
 	clear:both;
+}
+.videos{
+	font-size: 50px;
 }
 #background img{
 	margin-left:-80px;
@@ -50,4 +60,3 @@ body{
 	margin-left:50px;
 	margin-top:20px;
 }
-
