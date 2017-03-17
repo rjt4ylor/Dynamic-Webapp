@@ -1,5 +1,7 @@
 body{
 	background-color:rgb(204,204,204);
+	padding: 0;
+	margin: 0;
 }
 
 #container{
@@ -19,8 +21,6 @@ body{
 	float:right;
 	margin-top:-10px;
 	width:800px;
-	margin-left: 0px;
-	margin-right:40px;
 	font-size: 30px;
 }
 #logo{
