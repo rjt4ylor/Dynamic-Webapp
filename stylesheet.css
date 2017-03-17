@@ -1,5 +1,5 @@
 body{
-	background-color:white;
+	background-color:rgb(204,204,204);
 }
 
 #container{
@@ -10,7 +10,7 @@ body{
 }
 
 #header{
-	background-color: white;
+	background-color: rgb(204,204,204);
 	height:100px;
 }
 
@@ -40,7 +40,7 @@ margin-left: -50px;
 	text-indent: 3.0em;
 }
 #background{
-	background-color:rgb(204,204,204);
+	background-color:rgb(89, 83, 83);
 	height:100%;
 	width:100%;
 	clear:both;
@@ -52,11 +52,20 @@ margin-left: -50px;
 	margin-left:-80px;
 }
 #map{
-	background-color:rgb(176,176,176);
 	margin-top:-10px;
 	height:500px;
 }
 #map img{
+	width: 800px;
+	height: 400px;
 	margin-left:50px;
 	margin-top:20px;
+}
+#countrylist{
+	font-size:30px;
+}
+#countrylist img{
+	width:500px;
+	height:250px;
+	margin-left: -40px;
 }
