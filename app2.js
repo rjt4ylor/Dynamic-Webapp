@@ -31,7 +31,7 @@ function search(country) {
 }
 
 function onSearchResponse(response) {
-	var result1 = response.result.items[0].id.videoId;
+	var result1 = "youtube.com/embed/"+response.result.items[0].id.videoId+"'";
 	var result2 = response.result.items[1].id.videoId;
 	var result3 = response.result.items[2].id.videoId;
 	var result4 = response.result.items[3].id.videoId;
@@ -41,7 +41,7 @@ function onSearchResponse(response) {
 	
 	var results1 = result1.replace(/['"]+/g, '');
 	
-	document.write("'youtube.com/embed/"+result1+"'");
+	showResponse("<iframe src="+result1+"></iframe>");
 	
     
 	showResponse("<li>" +result2+"ddd</li>");
