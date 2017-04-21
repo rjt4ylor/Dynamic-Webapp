@@ -41,7 +41,7 @@ function onSearchResponse(response) {
 	
 	var results1 = result1.replace(/['"]+/g, '');
 	
-	document.write("<iframe src='youtube.com/embed/"+result1+"'></iframe>");
+	document.write("'youtube.com/embed/"+result1+"'");
 	
     
 	showResponse("<li>" +result2+"ddd</li>");
