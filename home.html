@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<link rel="stylesheet" href="header.css">
+	<title>Youtube Charts by Country</title>
+</head>
+
+<body>
+	<div id="header">
+		<div id="headerContent">
+		<img src = "img/logo.png">
+		<ul>
+			<li><a href='countries.html?country=GB'>Country List</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="map"></div>
+	
+	<script>
+	var map;
+	var uk = {lat: 54, lng: -2};
+
+		function initMap() {
+			var mapCanvas = document.getElementById("map");
+			var mapOptions = {zoom: 4, mapTypeControl: false, center: uk};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+			
+			var countries = [
+			['UK', 		54, -2,	"GB"],
+			['Norway', 	62, 10,	"NO"],
+			['France', 	46, 2, 	"FR"],
+			['Germany', 51, 9,	"DE"],
+			['Spain', 	40, -4, "ES"],
+			['Greece',	39, 22,	"GR"],
+			['Ireland',	53, -8,	"IE"],
+			['Portugal',39.3,-8,"PT"],
+			['Belgium',	50.5, 4,"BE"],
+			['Poland',	52, 20,	"PL"],
+			['Austria',	47.2, 13.2,	"AT"],
+			['Italy',	42.5, 12.5,	"IT"],
+			['Sweden',	62, 15,	"SE"],
+			['Finland',	64, 26,	"FI"],
+			]
+			
+			var name;
+			for (i=0;i<countries.length;i++){
+				name = countries[i][0];
+				var urls = "<iframe src='single.html?country="+countries[i][3]+"' frameBorder='0' height='240' width='320'></iframe>";
+				countries[i][0] = new google.maps.Marker({
+					position: {lat: countries[i][1], lng: countries[i][2]},
+					map: map,
+					title: countries[i][0],
+					url: urls
+				});
+				
+				countries[i][0].addListener('click', function(event) {
+					var infowindow = new google.maps.InfoWindow({content: this.url});
+					infowindow.open(map, this);
+				});
+			}
+		}
+	</script>
+	<script async defer src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDu9eArzcxpl3leK9G7c_YWZVGYgmkP79g&callback=initMap"></script>
+	
+</body>
+
+</html>
